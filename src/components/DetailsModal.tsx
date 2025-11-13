@@ -1,7 +1,7 @@
 'use client';
 
 import styles from './DetailsModal.module.css';
-import type { ResultadoBusca } from '../types/busca';
+import type { ResultadoBusca } from '@/types/busca';
 
 interface DetailsModalProps {
   open: boolean;
