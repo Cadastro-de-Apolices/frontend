@@ -33,7 +33,7 @@ export default function DetailsModal({ open, onClose, data }: DetailsModalProps)
         <section className={styles.section}>
           <h3 className={styles.sectionTitle}>Imóvel</h3>
           <p><strong>Nome:</strong> {imovel.nome_imovel}</p>
-          <p><strong>Código:</strong> {imovel.codigo_imovel}</p>
+          <p><strong>Código:</strong> {imovel.codigo_visual}</p>
           <p><strong>CEP:</strong> {imovel.cep}</p>
         </section>
 
@@ -55,7 +55,7 @@ export default function DetailsModal({ open, onClose, data }: DetailsModalProps)
           <p><strong>Nº Proposta:</strong> {apoliceAtual.numero_proposta || '-'}</p>
           <p><strong>Seguradora:</strong> {apoliceAtual.seguradora}</p>
           <p><strong>Status:</strong> {apoliceAtual.status}</p>
-          <p><strong>Data de envio:</strong> {formatDate(apoliceAtual.data_envio)}</p>
+          <p><strong>Data de envio:</strong> {formatDate(apoliceAtual.data_emissao)}</p>
           <p><strong>Vencimento:</strong> {formatDate(apoliceAtual.data_vencimento)}</p>
           <p><strong>Pagamento:</strong> {formatDate(apoliceAtual.data_pagamento)}</p>
           <p><strong>Parcelamento:</strong> {apoliceAtual.parcelamento ?? '-'}</p>
