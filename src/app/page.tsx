@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { FiSearch, FiEdit2, FiTrash2 } from 'react-icons/fi';
 import { FiHome, FiUser, FiFileText } from "react-icons/fi";
 import { MdLocationCity } from "react-icons/md";
-import type { ResultadoBusca, Pessoa, Imovel, ApoliceAtual } from './types/busca';
+import type { ResultadoBusca, Pessoa, Imovel, ApoliceAtual } from '@/types/busca';
 import Select from 'react-select';
 import { getUser } from "@/lib/auth";
 import type { SessionUser } from "@/lib/auth";

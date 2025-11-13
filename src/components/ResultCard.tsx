@@ -1,7 +1,7 @@
 'use client';
 
 import styles from './ResultCard.module.css';
-import type { ResultadoBusca } from '../types/busca';
+import type { ResultadoBusca } from '@/types/busca';
 
 interface ResultCardProps {
   resultado: ResultadoBusca;
@@ -19,7 +19,7 @@ export default function ResultCard({ resultado, onClick }: ResultCardProps) {
       </div>
 
       <h2 className={styles.title}>{imovel.nome_imovel}</h2>
-      <p className={styles.subtitle}>Código do imóvel: {imovel.codigo_imovel}</p>
+      <p className={styles.subtitle}>Código do imóvel: {imovel.codigo_visual}</p>
 
       <div className={styles.row}>
         <div>

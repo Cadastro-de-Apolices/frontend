@@ -3,7 +3,7 @@
 
 import { useEffect, useState, FormEvent, useRef } from 'react';
 import styles from './page.module.css';
-import type { Pessoa, Imovel } from '../types/busca';
+import type { Pessoa, Imovel } from '@/types/busca';
 import Select from 'react-select';
 import { FiHome, FiUser, FiFileText } from "react-icons/fi";
 import { MdLocationCity } from "react-icons/md";
