@@ -1,14 +1,24 @@
+// proxy.ts
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { verifySession } from "./lib/auth-server";
 
-export async function middleware(req: NextRequest) {
+export default async function proxy(req: NextRequest) {
   const { pathname, search } = req.nextUrl;
 
   // liberar login, assets estáticos e API de login
-  const publicPaths = ["/login", "/api/auth/login", "/api/auth/me", "/api/auth/logout", "/favicon.ico"];
+  const publicPaths = [
+    "/login",
+    "/api/auth/login",
+    "/api/auth/me",
+    "/api/auth/logout",
+    "/favicon.ico",
+  ];
+
   const isPublic = publicPaths.some((p) => pathname.startsWith(p));
-  const isStatic = pathname.startsWith("/_next") || pathname.startsWith("/images");
+  const isStatic =
+    pathname.startsWith("/_next") || pathname.startsWith("/images");
+
   if (isPublic || isStatic) return NextResponse.next();
 
   const token = req.cookies.get("session")?.value;
