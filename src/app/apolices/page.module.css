@@ -1,0 +1,225 @@
+.main {
+  min-height: calc(100vh - 56px);
+  background: #f3f4f6;
+  padding: 2rem 1rem;
+}
+
+.card {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
+}
+
+.title {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.4rem;
+  color: #111827;
+}
+
+.subtitle {
+  margin: 0 0 1.5rem 0;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  color: #374151;
+  gap: 0.35rem;
+}
+
+.input {
+  padding: 0.7rem 0.8rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.18);
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.button {
+  margin-top: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: none;
+  background: #4f46e5;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.button:hover:not(:disabled) {
+  background: #4338ca;
+  transform: translateY(-1px);
+}
+
+.button:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.error {
+  font-size: 0.85rem;
+  color: #b91c1c;
+}
+
+.success {
+  font-size: 0.85rem;
+  color: #15803d;
+}
+
+.navButtons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #00000000;
+  color: black;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.navBtn:hover {
+  background: #4f46e5;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* lista centralizada */
+.anexosPreview {
+  margin: 0.25rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* 👉 centraliza os itens */
+  gap: 0.35rem;
+  width: 100%;
+}
+
+/* item “pílula” */
+.anexoPreviewItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  padding: 0.35rem 0.6rem;
+  font-size: 0.8rem;
+  color: #4b5563;
+  max-width: 100%;
+}
+
+.anexoName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 420px;     /* evita quebrar o layout */
+}
+
+/* botão remover em pílula */
+.removeAnexoBtn {
+  border: none;
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.removeAnexoBtn:hover {
+  background: #fecaca;
+}
+
+/* container do campo de anexos */
+.fileField {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* 👉 centraliza botão e lista */
+  gap: 0.5rem;
+}
+
+/* legenda "Anexos (opcional)" com mesma tipografia dos outros labels */
+.labelText {
+  align-self: flex-start;  /* fica alinhado à esquerda, como os demais labels */
+  font-size: 0.85rem;
+  color: #374151;
+}
+
+/* esconde o input nativo para sumir com o nome ao lado do botão */
+.hiddenFile {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* botão "Escolher arquivos" minimalista e centralizado */
+.pickBtn {
+  all: unset;
+  box-sizing: border-box;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: box-shadow .15s ease, transform .1s ease, border-color .15s ease;
+}
+
+.pickBtn:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+  transform: translateY(-1px);
+}
+
+.pickBtn:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
